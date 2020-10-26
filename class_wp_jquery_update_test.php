@@ -86,7 +86,7 @@ class WP_Jquery_Update_Test {
 	// Replace UI 1.11.4 with 1.12.1
 	private static function jquery_ui_1121( $scripts ) {
 		$assets_url = plugins_url( 'assets/ui', __FILE__ );
-		$dev_suffix = wp_scripts_get_suffix( 'dev' );
+		$dev_suffix = wp_scripts_get_suffix( '' );
 
 		// The core.js in 1.12.1 only defines dependencies.
 		// Here it is concatenated using another build task in Grunt.

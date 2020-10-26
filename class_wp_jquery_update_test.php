@@ -48,6 +48,7 @@ class WP_Jquery_Update_Test {
 		);
 
 		$settings = wp_parse_args( $settings, $defaults );
+		$dev_suffix = wp_scripts_get_suffix( '' );
 
 		if ( 'default' === $settings['version'] ) {
 			// If Migrate is disabled
@@ -66,14 +67,14 @@ class WP_Jquery_Update_Test {
 				self::set_script( $scripts, 'jquery', false, array( 'jquery-core' ), '3.5.1' );
 
 				// Set 'jquery-core' to 3.5.1
-				self::set_script( $scripts, 'jquery-core', $assets_url . 'jquery-3.5.1.min.js', array(), '3.5.1' );
+				self::set_script( $scripts, 'jquery-core', "{$assets_url}/jquery-3.5.1{$dev_suffix}.js", array(), '3.5.1' );
 
 				// Reset/remove 'jquery-migrate'
 				// TBD: needed?
 				self::set_script( $scripts, 'jquery-migrate', false, array() );
 			} else {
 				self::set_script( $scripts, 'jquery', false, array( 'jquery-core', 'jquery-migrate' ), '3.5.1' );
-				self::set_script( $scripts, 'jquery-core', $assets_url . 'jquery-3.5.1.min.js', array(), '3.5.1' );
+				self::set_script( $scripts, 'jquery-core', "{$assets_url}/jquery-3.5.1{$dev_suffix}.js", array(), '3.5.1' );
 				self::set_script( $scripts, 'jquery-migrate', $assets_url . 'jquery-migrate-3.3.0.min.js', array(), '3.3.0' );
 			}
 

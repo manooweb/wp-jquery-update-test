@@ -59,6 +59,10 @@ class WP_Jquery_Update_Test {
 				// For 5.5-beta1 or newer.
 				self::set_script( $scripts, 'jquery', false, array( 'jquery-core', 'jquery-migrate' ), '1.12.4-wp' );
 			}
+			// jQuery UI 1.12.1 is usable since jQuery 1.6. So it can be use now with the latest WP version which uses jQuery 1.12.4 (WP 5.5).
+			if ( '1.12.1' === $settings['uiversion'] ) {
+				self::jquery_ui_1121( $scripts );
+			}
 		} elseif ( '3.5.1' === $settings['version'] ) {
 			$assets_url = plugins_url( 'assets/', __FILE__ );
 

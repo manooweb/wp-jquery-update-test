@@ -129,7 +129,7 @@ class WP_Jquery_Update_Test {
 		self::set_script( $scripts, 'jquery-ui-progressbar', "{$assets_url}/progressbar{$dev_suffix}.js", array( 'jquery-ui-core', 'jquery-ui-widget' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-resizable', "{$assets_url}/resizable{$dev_suffix}.js", array( 'jquery-ui-mouse' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-selectable', "{$assets_url}/selectable{$dev_suffix}.js", array( 'jquery-ui-mouse' ), '1.12.1', true );
-		self::set_script( $scripts, 'jquery-ui-selectmenu', "{$assets_url}/selectmenu{$dev_suffix}.js", array( 'jquery-ui-menu', 'jquery-ui-form-reset' ), '1.12.1', true );
+		self::set_script( $scripts, 'jquery-ui-selectmenu', "{$assets_url}/selectmenu{$dev_suffix}.js", array( 'jquery-ui-menu', 'jquery-ui-form-reset', 'jquery-ui-escape-selector' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-slider', "{$assets_url}/slider{$dev_suffix}.js", array( 'jquery-ui-mouse' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-sortable', "{$assets_url}/sortable{$dev_suffix}.js", array( 'jquery-ui-mouse' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-spinner', "{$assets_url}/spinner{$dev_suffix}.js", array( 'jquery-ui-button' ), '1.12.1', true );
@@ -137,6 +137,7 @@ class WP_Jquery_Update_Test {
 		self::set_script( $scripts, 'jquery-ui-tooltip', "{$assets_url}/tooltip{$dev_suffix}.js", array( 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-position' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-widget', "{$assets_url}/widget{$dev_suffix}.js", array( 'jquery' ), '1.12.1', true );
 		self::set_script( $scripts, 'jquery-ui-form-reset', "{$assets_url}/form-reset-mixin{$dev_suffix}.js", array( 'jquery' ), '1.12.1', true );
+		self::set_script( $scripts, 'jquery-ui-escape-selector', "{$assets_url}/escape-selector{$dev_suffix}.js", array( 'jquery' ), '1.12.1', true );
 
 		// New in 1.12.1
 		self::set_script( $scripts, 'jquery-ui-checkboxradio', "{$assets_url}/checkboxradio{$dev_suffix}.js", array( 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-form-reset' ), '1.12.1', true );

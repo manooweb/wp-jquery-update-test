@@ -79,7 +79,7 @@ class WP_Jquery_Update_Test {
 			} else {
 				self::set_script( $scripts, 'jquery', false, array( 'jquery-core', 'jquery-migrate' ), '3.5.1' );
 				self::set_script( $scripts, 'jquery-core', "{$assets_url}/jquery-3.5.1{$dev_suffix}.js", array(), '3.5.1' );
-				self::set_script( $scripts, 'jquery-migrate', $assets_url . 'jquery-migrate-3.3.0.min.js', array(), '3.3.0' );
+				self::set_script( $scripts, 'jquery-migrate', $assets_url . "jquery-migrate-3.3.0{$dev_suffix}.js", array(), '3.3.0' );
 			}
 
 			if ( '1.12.1' === $settings['uiversion'] ) {
